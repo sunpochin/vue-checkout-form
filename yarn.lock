@@ -422,6 +422,11 @@
   "resolved" "https://registry.npmjs.org/@soda/get-current-script/-/get-current-script-1.0.2.tgz"
   "version" "1.0.2"
 
+"@stripe/stripe-js@^1.13.2":
+  "integrity" "sha512-UIuzpbJqgXCTvJhY/aZYvBtaKdMfQgnIv6kkLlfRJ9smZcC4zoPvq3j7k9wobYI+idHAWP4BRiPnqA8lvzJCtg=="
+  "resolved" "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-1.35.0.tgz"
+  "version" "1.35.0"
+
 "@trysound/sax@0.2.0":
   "integrity" "sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA=="
   "resolved" "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
@@ -663,6 +668,14 @@
     "@volar/code-gen" "0.39.5"
     "@volar/typescript-faster" "0.39.5"
     "@volar/vue-language-core" "0.39.5"
+
+"@vue-stripe/vue-stripe@^4.4.4":
+  "integrity" "sha512-PgcVRcQ6TBtSBQS6yvzoH9kJpiCXZ6DamGZBBGNG5+4/UYsaDTLpyuP8xw0sqm0KQn69kRv2Uq17B6bsAp/LxQ=="
+  "resolved" "https://registry.npmjs.org/@vue-stripe/vue-stripe/-/vue-stripe-4.4.4.tgz"
+  "version" "4.4.4"
+  dependencies:
+    "@stripe/stripe-js" "^1.13.2"
+    "vue-coerce-props" "^1.0.0"
 
 "@vue/babel-helper-vue-transform-on@^1.0.2":
   "integrity" "sha512-hz4R8tS5jMn8lDq6iD+yWL6XNB699pGIVLk7WSJnn1dbpjaazsjZQkieJoRX6gW5zpYSCFqQ7jUquPNY65tQYA=="
@@ -4882,6 +4895,11 @@
     "rollup" ">=2.75.6 <2.77.0 || ~2.77.0"
   optionalDependencies:
     "fsevents" "~2.3.2"
+
+"vue-coerce-props@^1.0.0":
+  "integrity" "sha512-4fdRMXO6FHzmE7H4soAph6QmPg3sL/RiGdd+axuxuU07f02LNMns0jMM88fmt1bvSbN+2Wyd8raho6p6nXUzag=="
+  "resolved" "https://registry.npmjs.org/vue-coerce-props/-/vue-coerce-props-1.0.0.tgz"
+  "version" "1.0.0"
 
 "vue-hot-reload-api@^2.3.0":
   "integrity" "sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog=="

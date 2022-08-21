@@ -1,6 +1,6 @@
 {
 	"name": "vue-checkout-form",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "sunpochin <sunpochin@gmail.com>",
 	"main": "dist/vue-checkout-form.js",
 	"scripts": {
@@ -11,6 +11,7 @@
 		"type-check": "vue-tsc --noEmit"
 	},
 	"dependencies": {
+		"@vue-stripe/vue-stripe": "^4.4.4",
 		"@vue/cli-service": "^5.0.8",
 		"bootstrap": "^5.2.0",
 		"vue": "^3.2.29",

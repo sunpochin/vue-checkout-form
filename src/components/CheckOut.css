@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#card-number-element,
+#card-expiry-element,
+#card-cvc-element {
+	background: white;
+	padding: 5px;
+	border: 1px solid #222222;
+	border-radius: 3px;
+}
+
+input {
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 3px;
+	border: solid 1px #777;
+	color: darkgray;
+}
+
+.checkout-area {
+	background-color: #eee;
+}
+
+fieldset {
+	width: 100%;
+	border: 0px;
+}
+.number-section {
+	padding: 10px 30px 10px 30px;
+}
+.number-input {
+	display: flex;
+	/* flex-wrap: wrap; */
+	/* justify-content: space-between; */
+	gap: 20px;
+}
+
+.name-section,
+.date-section,
+.place-order-button-block {
+  display: flex;
+	padding: 10px 30px 10px;
+  gap: 20px;
+}
+
+.name-input,
+.date-input {
+	display: flex;
+	/* justify-content: space-between; */
+	gap: 20px;
+}
+
+.place-order-button-block {
+  margin: 10px 0;
+}
+
+.pink {
+  background-color: pink;
+}

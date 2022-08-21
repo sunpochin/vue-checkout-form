@@ -1,0 +1,7 @@
+{
+  "hosting": {
+		"site": "vue-stripe-web",
+		"public": "public",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
+}

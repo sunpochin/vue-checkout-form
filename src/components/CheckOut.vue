@@ -1,5 +1,10 @@
 <template>
 	<section class="checkout-area">
+		<h5 class="#e0e0e0 grey lighten-4">
+			付款：
+			<span class="right">$25</span>
+		</h5>
+		<br/>
 		<div class="error red center-align white-text">
 			{{ stripeValidationError }}
 		</div>
@@ -39,7 +44,9 @@
 			</div>
 		</div>
 		<div class="col s12 place-order-button-block">
-			<button class="btn col s12 #e91e63 pink" @click="placeOrderButtonPressed">Place Order</button>
+			<button class="btn col s12 #e91e63 pink" @click="placeOrderButtonPressed">
+				Place Order
+			</button>
 		</div>
 	</section>
 </template>

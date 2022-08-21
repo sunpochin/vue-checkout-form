@@ -1,6 +1,6 @@
 {
 	"name": "vue-checkout-form",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "sunpochin <sunpochin@gmail.com>",
 	"main": "dist/vue-checkout-form.js",
 	"scripts": {

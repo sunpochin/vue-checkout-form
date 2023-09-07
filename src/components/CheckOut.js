@@ -5,6 +5,10 @@
 // Vue.use(BootstrapVue);
 import { StripeCheckout } from '@vue-stripe/vue-stripe';
 
+import { db } from './base';
+import { doc, setDoc } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
+
 export default {
 	// components: {
 	//   StripeCheckout,
@@ -12,6 +16,7 @@ export default {
 
 	data() {
 		return {
+			amount: 25,
 			stripe: null,
 			cardNumberElement: null,
 			cardExpiryElement: null,
@@ -26,8 +31,25 @@ export default {
 		this.createAndMountFormElements();
 	},
 	methods: {
-		saveDataToFireStore() {
+		async saveDataToFireStore(stripeObject) {
 			console.log('saveDataToFireStore');
+			// const db = firebase.firestore();
+			// const chargesRef = db.collection('charges');
+			// const pushId = chargesRef.doc().id;
+			// db.collection('charges').doc(pushId).set(stripeObject);
+
+			// const docRef = await addDoc(collection(db, 'cities'), {
+			// 	name: 'Tokyo',
+			// 	country: 'Japan',
+			// });
+			// console.log('Document written with ID: ', docRef.id);
+			// const data = { name: 'test', country: 'USA' };
+			// const ret = await setDoc(doc(db, 'cities', 'new-city-id'), data);
+			// console.log('ret: ', ret);
+			const ret = await addDoc(collection(db, 'transactions'), stripeObject);
+			console.log('ret: ', ret);
+			const js = await ret.json();
+			console.log('js: ', js);
 		},
 		placeOrderButtonPressed(event) {
 			// console.log('event: ', event);
@@ -46,7 +68,7 @@ export default {
 					}
 				})
 				.catch((error) => {
-					console.log('error: ', error)
+					console.log('error: ', error);
 					this.stripeValidationError = error;
 				});
 		},
@@ -66,7 +88,12 @@ export default {
 			this.cardCVCElement = elements.create('cardCvc');
 			this.cardCVCElement.mount('#card-cvc-element');
 
-			console.log('this.cardNumberElement: ', this.cardNumberElement);
+			// var stripeObject = {
+			// 	amount: this.amount,
+			// 	source: 'fake token',
+			// };
+			// console.log('stripeObject: ', stripeObject);
+			// this.saveDataToFireStore(stripeObject);
 
 			this.cardNumberElement.on('change', this.setValidationError);
 			this.cardExpiryElement.on('change', this.setValidationError);
